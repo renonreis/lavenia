@@ -1,0 +1,42 @@
+.bg-grey {
+	background-color: #f5f5f5;
+}
+
+.login {
+	background-color: #ffffff;
+}
+
+.login h1 a {
+	background-image: url(./../assets/img/logo.svg);
+	background-position: center;
+	background-size: contain;
+	width: 100%;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+	border-color: #258649;
+	box-shadow: 0 0 0 1px #258649;
+}
+
+.login .button.wp-hide-pw .dashicons {
+	color: #258649;
+}
+
+.login .button-primary {
+	background: #258649;
+	border-color: #258649;
+}
+
+.login .button-primary:hover {
+	background: #258649;
+	border-color: #258649;
+}
+
+p#nav a,
+p#backtoblog a,
+a.privacy-policy-link {
+	color: #000000 !important;
+}
+
+/*# sourceMappingURL=login.css.map */
