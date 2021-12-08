@@ -1,4 +1,62 @@
 .newsletter {
 	background-color: $primary;
 	padding: 16px 0;
+
+	h2 {
+		align-self: center;
+		color: $white;
+		font-size: 14px;
+		margin: 0 20px 0 0;
+		max-width: 150px;
+
+		span {
+			font-size: 18px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+	}
+
+	.wpcf7 {
+		width: 100%;
+		max-width: 600px;
+
+		form {
+
+			input {
+				border: 0;
+				border-radius: 5px;
+				line-height: 23px;
+				padding: 0 18px;
+				width: 100%;
+			}
+
+			.wpcf7-submit {
+				font-size: 12px;
+				padding: 0;
+			}
+
+			.wpcf7-response-output {
+				margin: 10px 0 0 !important;
+			}
+
+			.wpcf7-spinner {
+				display: none;
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px) {
+		h2 {
+			margin: 0 5px 0 0;
+		}
+
+		.wpcf7 {
+			form {
+				input {
+					margin: 2.5px 0;
+				}
+			}
+		}
+	}
 }
