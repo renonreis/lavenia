@@ -1,3 +1,92 @@
 header {
-  padding: 63px 0 0;
+  padding: 62px 0 0;
+
+  .menu-mobile {
+    background-color: transparent;
+    border: none;
+    min-height: 62px;
+    padding: 0;
+
+    &.navbar-toggler {
+      &:focus {
+        box-shadow: none;
+        outline: 0;
+      }
+    }
+  }
+
+  .navbar {
+    background-color: $grey;
+
+    padding: 0;
+    .container {
+      min-height: 62px;
+    }
+  }
+
+  .logo {
+    align-self: flex-start;
+    position: relative;
+
+    span {
+      background: $grey;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      left: 50%;
+      margin-left: -79px;
+      max-width: 158px;
+      min-height: 158px;
+      padding: 0 0 35px;
+      position: absolute;
+      top: -30px;
+      width: 100%;
+
+      img {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  #menu-cabecalho {
+    margin: 0;
+    li {
+      a {
+        color: $black-neutral;
+        font-size: 14px;
+      }
+      &.active {
+        a {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .navbar-collapse {
+      background: $blue;
+      min-width: calc(100% + 1.5rem);
+      margin-left: -0.75rem;
+      padding: 0 0.75rem;
+
+      #menu-cabecalho {
+        margin: 90px 0 40px 0;
+
+        li {
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .search-div {
+      margin-right: 10px;
+    }
+
+    .open-search {
+      margin: 0 20px;
+    }
+  }
 }

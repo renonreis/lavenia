@@ -17,7 +17,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 information">
-						<ul class="d-flex justify-content-center">
+						<ul class="d-flex justify-content-between">
 							<li>
 								<a href="">
 									<span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/whatsapp.svg" alt=""/></span>

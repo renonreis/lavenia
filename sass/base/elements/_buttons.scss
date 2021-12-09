@@ -19,3 +19,17 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+
+.btn-shop {
+  background: $blue;
+  border: 0;
+  border-radius: 13px;
+  color: $white !important;
+	display: inline-block;
+  font-weight: 700;
+  line-height: 25px;
+  min-width: 80px;
+  padding: 0 0.75rem;
+  text-align: center;
+	text-decoration: none;
+}

@@ -1,0 +1,33 @@
+.search-form {
+  align-items: center;
+  background-color: $white;
+  border: 1px solid $grey-neutral;
+  border-radius: 50px;
+  display: flex;
+  line-height: 15px;
+  margin: 0 10px 0 0;
+  max-width: 350px;
+  padding: 0 12px;
+  width: 100%;
+
+  label {
+    width: 100%;
+  }
+
+  .search-field {
+    border: none;
+    color: $grey-light;
+    font-size: 14px;
+    padding: 0;
+    line-height: 23px;
+    outline: none;
+    width: 100%;
+  }
+
+  .search-submit {
+    border: 0;
+    background: none;
+    padding: 0 5px;
+  }
+
+}
