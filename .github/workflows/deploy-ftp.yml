@@ -2,7 +2,7 @@ name: Simple FTP deploy
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   web-deploy:
