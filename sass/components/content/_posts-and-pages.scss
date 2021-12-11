@@ -31,3 +31,20 @@
 		object-position: center;
 	}
 }
+
+.box-shadow {
+	box-shadow: -3px 0 9px rgba(0,0,0,0.12);
+}
+
+.post-categoria {
+	font-size: 12px;
+	color: $blue;
+	text-decoration: none;
+}
+
+.grid-posts {
+	background-color: $white;
+	.content {
+		padding: 25px 30px;
+	}
+}

@@ -773,6 +773,24 @@ textarea {
 	object-position: center;
 }
 
+.box-shadow {
+	box-shadow: -3px 0 9px rgba(0, 0, 0, 0.12);
+}
+
+.post-categoria {
+	font-size: 12px;
+	color: #0A92E0;
+	text-decoration: none;
+}
+
+.grid-posts {
+	background-color: #ffffff;
+}
+
+.grid-posts .content {
+	padding: 25px 30px;
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {
@@ -909,6 +927,7 @@ textarea {
 .newsletter .wpcf7 form input {
 	border: 0;
 	border-radius: 5px;
+	font-size: 12px;
 	line-height: 23px;
 	padding: 0 18px;
 	width: 100%;
