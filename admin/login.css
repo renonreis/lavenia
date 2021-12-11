@@ -15,22 +15,22 @@
 
 .login input[type="text"]:focus,
 .login input[type="password"]:focus {
-	border-color: #258649;
-	box-shadow: 0 0 0 1px #258649;
+	border-color: #0A92E0;
+	box-shadow: 0 0 0 1px #0A92E0;
 }
 
 .login .button.wp-hide-pw .dashicons {
-	color: #258649;
+	color: #0A92E0;
 }
 
 .login .button-primary {
-	background: #258649;
-	border-color: #258649;
+	background: #0A92E0;
+	border-color: #0A92E0;
 }
 
 .login .button-primary:hover {
-	background: #258649;
-	border-color: #258649;
+	background: #0A92E0;
+	border-color: #0A92E0;
 }
 
 p#nav a,

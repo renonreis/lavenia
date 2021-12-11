@@ -12,7 +12,7 @@ get_header();
 
   <?php get_template_part( 'template-parts/newsletter' ); ?>
 
-  <section class="recent-posts pt-5 pb-5">
+  <section class="recent-posts pt-5 pb-5 recent-posts-load-more">
     <div class="container">
       <div class="row">
       <?php

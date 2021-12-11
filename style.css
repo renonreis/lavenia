@@ -937,11 +937,11 @@ textarea {
 	font-weight: 700;
 }
 
-.post-template-default.single .img {
+.post-template-default.single .img-post-mobile {
 	position: relative;
 }
 
-.post-template-default.single .img .box-autor {
+.post-template-default.single .img-post-mobile .box-autor {
 	align-items: center;
 	display: flex;
 	bottom: 16px;
@@ -949,22 +949,22 @@ textarea {
 	position: absolute;
 }
 
-.post-template-default.single .img .box-autor img {
+.post-template-default.single .img-post-mobile .box-autor img {
 	border-radius: 50%;
 	margin-right: 12px;
 }
 
-.post-template-default.single .img .box-autor p {
+.post-template-default.single .img-post-mobile .box-autor p {
 	color: #ffffff;
 	margin: 0;
 }
 
-.post-template-default.single .img .box-autor .author-name {
+.post-template-default.single .img-post-mobile .box-autor .author-name {
 	font-weight: 700;
 }
 
 @media screen and (max-width: 414px) {
-	.post-template-default .img {
+	.post-template-default .img-post-mobile {
 		position: relative;
 		width: calc(100% + 30px);
 		margin-left: -12px;
@@ -972,7 +972,7 @@ textarea {
 }
 
 @media screen and (min-width: 415px) {
-	.post-template-default.single .img .post-image {
+	.post-template-default.single .img-post-mobile .post-image {
 		border-radius: 0 0 10px 10px;
 		max-height: 480px;
 		object-fit: cover;

@@ -17,7 +17,7 @@ $image_mobile = get_the_post_thumbnail_url(get_the_ID(), 'featured-blog-mobile')
 	<div class="row">
 		<div class="col-12">
 			<?php if($image): ?>
-				<div class="img">
+				<div class="img img-post-mobile">
 					<picture>
 						<source srcset="<?php echo esc_url($image_mobile); ?>" media="(max-width: 414px)">
 						<source srcset="<?php echo esc_url($image); ?>" media="(min-width: 415px)">
