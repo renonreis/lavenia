@@ -210,3 +210,31 @@ add_image_size( 'featured-blog-desktop', 1170, 480, true );
 add_image_size( 'featured-blog-mobile', 414, 570, true );
 add_image_size( 'recent-posts', 375, 270, true );
 add_image_size( 'list-posts', 230, 190, true );
+
+function set_post_views($post_id) {
+	$count_key = 'wp_post_views_count';
+	$count = get_post_meta($post_id, $count_key, true);
+
+	if($count == '') {
+		$count = 0;
+		delete_post_meta($post_id, $count_key);
+		add_post_meta($post_id, $count_key, '0');
+	} else {
+		$count++;
+		update_post_meta($post_id, $count_key, $count);
+	}
+}
+
+function track_post_views ($post_id) {
+	if ( !is_single() )
+	return;
+
+	if ( empty ( $post_id) ) {
+			global $post;
+			$post_id = $post->ID;
+	}
+
+	set_post_views($post_id);
+}
+
+add_action( 'wp_head', 'track_post_views');

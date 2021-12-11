@@ -12,40 +12,70 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+		<div class="container">
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+			<div class="row">
+				<div class="col-sm-12">
+					<?php if ( have_posts() ) : ?>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+					<header class="page-header mb-5">
+						<?php
+						the_archive_title( '<h1 class="page-title">', '</h1>' );
+						the_archive_description( '<div class="archive-description">', '</div>' );
+						?>
+					</header><!-- .page-header -->
+				</div>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				<div class="col-md-8">
+					<?php
+					/* Start the Loop */
+					while ( have_posts() ) :
+						the_post();
 
-			endwhile;
+						/*
+						* Include the Post-Type-specific template for the content.
+						* If you want to override this in a child theme, then include a file
+						* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+						*/
+						get_template_part( 'template-parts/blog', 'list' );
 
-			the_posts_navigation();
+					endwhile;
 
-		else :
+					?>
 
-			get_template_part( 'template-parts/content', 'none' );
+					<div class="pagination">
+						<?php
+							$big = 99;
+							echo paginate_links( array(
+								'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+								'prev_text' => '<',
+								'next_text' => '>'
+							));
+						?>
+					</div>
+				</div>
 
-		endif;
-		?>
+				<div class="col-sm-4">
+					<?php get_template_part( 'template-parts/sidebar' ); ?>
+				</div>
+
+				<div class="col-sm-12">
+					<?php
+
+					else :
+
+					get_template_part( 'template-parts/content', 'none' );
+
+					endif;
+
+					?>
+				</div>
+
+			</div>
+
+		</div>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

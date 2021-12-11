@@ -26,7 +26,7 @@ get_header();
           while ( $the_query_recent->have_posts() ) {
             $the_query_recent->the_post();
 
-            get_template_part( 'template-parts/blog', 'grid' );
+            get_template_part( 'template-parts/blog', 'grid', $args = array( 'columns' => 'col-md-4' ));
 
           }
         } else {
@@ -37,33 +37,39 @@ get_header();
     </div>
   </section>
 
-  <section class="list-posts">
+  <section class="list-posts-page">
     <div class="container">
       <div class="row">
-      <?php
-        $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-        $args = array(
-          'offset'         => 3,
-          'paged'          => $paged,
-          'posts_per_page' => 4,
-          'post_type'      => 'post'
-        );
-        $the_query = new WP_Query( $args );
+        <div class="col-md-8">
+          <?php
+          $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+          $args = array(
+            'offset'         => 3,
+            'paged'          => $paged,
+            'posts_per_page' => 4,
+            'post_type'      => 'post'
+          );
+          $the_query = new WP_Query( $args );
 
-        if ( $the_query->have_posts() ) {
-          while( $the_query->have_posts() ) :
-            $the_query->the_post();
+          if ( $the_query->have_posts() ) {
+            while( $the_query->have_posts() ) :
+              $the_query->the_post();
 
-            get_template_part( 'template-parts/blog', 'list' );
+              get_template_part( 'template-parts/blog', 'list' );
 
-          endwhile;
+            endwhile;
 
 
-        } else {
-          echo '<h2>Não há postagens existentes</h2>';
-        }
-        wp_reset_postdata();
-      ?>
+          } else {
+            echo '<h2>Não há postagens existentes</h2>';
+          }
+          wp_reset_postdata();
+        ?>
+        </div>
+        <div class="col-md-4">
+          <?php get_template_part( 'template-parts/sidebar' ); ?>
+        </div>
+      </div>
     </div>
   </section>
 

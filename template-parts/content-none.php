@@ -10,42 +10,43 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'lavenia' ); ?></h1>
-	</header><!-- .page-header -->
+	<div class="container-full">
 
-	<div class="page-content">
-		<?php
-		if ( is_home() && current_user_can( 'publish_posts' ) ) :
+		<div class="row">
 
-			printf(
-				'<p>' . wp_kses(
-					/* translators: 1: link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'lavenia' ),
-					array(
-						'a' => array(
-							'href' => array(),
-						),
-					)
-				) . '</p>',
-				esc_url( admin_url( 'post-new.php' ) )
-			);
+			<div class="col-md-12">
+				<header class="page-header mb-5">
+					<h1 class="page-title"><?php esc_html_e( 'Nenhum resultado encontrado', 'lavenia' ); ?></h1>
+				</header><!-- .page-header -->
+			</div>
 
-		elseif ( is_search() ) :
-			?>
+			<div class="col-md-8">
+				<div class="page-content">
+					<?php
+					if ( is_search() ) :
+						?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'lavenia' ); ?></p>
-			<?php
-			get_search_form();
+						<p><?php esc_html_e( 'Desculpe, mas nada corresponde aos seus termos de pesquisa. Por favor, tente novamente com algumas palavras-chave diferentes.', 'lavenia' ); ?></p>
+						<?php
+						get_template_part( 'template-parts/searchform' );
 
-		else :
-			?>
+					else :
+						?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'lavenia' ); ?></p>
-			<?php
-			get_search_form();
+						<p><?php esc_html_e( 'Parece que não conseguimos encontrar o que você está procurando. Talvez pesquisar possa ajudar.', 'lavenia' ); ?></p>
+						<?php
+						get_template_part( 'template-parts/searchform' );
 
-		endif;
-		?>
-	</div><!-- .page-content -->
+					endif;
+					?>
+				</div><!-- .page-content -->
+			</div>
+
+			<div class="col-md-4">
+				<?php get_template_part( 'template-parts/sidebar' ); ?>
+			</div>
+
+		</div>
+
+	</div>
 </section><!-- .no-results -->

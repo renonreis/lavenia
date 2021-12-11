@@ -12,29 +12,25 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+		<div class="container">
 
-			get_template_part( 'template-parts/content', get_post_type() );
+			<div class="row">
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'lavenia' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'lavenia' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
+				<div class="col">
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+				<?php
+					while ( have_posts() ) :
+						the_post();
 
-		endwhile; // End of the loop.
-		?>
+						get_template_part( 'template-parts/content', get_post_type() );
+
+					endwhile; // End of the loop.
+				?>
+				</div>
+			</div>
+		</div>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

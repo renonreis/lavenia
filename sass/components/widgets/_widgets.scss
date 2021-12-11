@@ -6,3 +6,89 @@
 		max-width: 100%;
 	}
 }
+
+.newsletter-sidebar {
+	background-color: $blue-light;
+	padding: 30px 36px;
+	text-align: center;
+
+	h2 {
+		font-family: Montserrat, sans-serif !important;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 36px;
+		margin: 0 0 4px;
+	}
+
+	p {
+		font-size: 14px;
+		margin: 0 0 14px;
+	}
+
+	form {
+
+		input {
+			background: $white;
+			border: 0;
+			border-radius: 50px;
+			color: $black;
+			line-height: 18px;
+			margin: 0 0 14px;
+			padding: 8px 20px;
+			width: 100%;
+		}
+
+		.wpcf7-list-item {
+			margin: 0;
+
+			label {
+				display: flex;
+				margin: 0 0 14px;
+				text-align: left;
+			}
+
+			input[type="checkbox"] {
+				width: auto;
+				margin: 0 10px 0 0;
+			}
+
+			span.wpcf7-list-item-label {
+				font-size: 12px;
+				line-height: 15px;
+			}
+		}
+
+		.wpcf7-submit {
+			background: $blue;
+			color: $white;
+			font-size: 12px;
+			line-height: 16px;
+  		width: auto;
+			padding: 8px 10px;
+		}
+
+		.wpcf7-submit:disabled {
+			cursor: not-allowed;
+			opacity: 0.5;
+		}
+
+		span.wpcf7-spinner {
+			display: none;
+		}
+
+	}
+
+	.media-social {
+		p {
+			font-weight: 700;
+			line-height: 20px;
+			margin: 0;
+		}
+
+		a {
+			margin: 0 2.5px;
+			text-decoration: none;
+		}
+	}
+
+}
