@@ -193,6 +193,11 @@ require get_template_directory() . '/inc/admin.php';
 require get_template_directory() . '/inc/acf.php';
 
 /**
+ * Home posts with Pagination
+ */
+require get_template_directory() . '/inc/home-posts.php';
+
+/**
  * Register Custom Navigation Walker
  */
 function register_navwalker(){

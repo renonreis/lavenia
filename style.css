@@ -995,6 +995,39 @@ textarea {
 	color: #989898;
 }
 
+.pag_loading {
+	padding: 20px;
+	background-color: #ccc;
+}
+
+.pagination-link ul {
+	margin: 0;
+	padding: 0;
+}
+
+.pagination-link ul li {
+	display: inline;
+	margin: 3px;
+	padding: 4px 8px;
+	background: #FFF;
+	color: black;
+}
+
+.pagination-link ul li.active:hover {
+	cursor: pointer;
+	background: #1E8CBE;
+	color: white;
+}
+
+.pagination-link ul li.inactive {
+	background: #7E7E7E;
+}
+
+.pagination-link ul li.selected {
+	background: #1E8CBE;
+	color: white;
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {

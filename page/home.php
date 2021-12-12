@@ -42,30 +42,46 @@ get_header();
       <div class="row">
         <div class="col-md-8">
           <?php
-          $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-          $args = array(
-            'post_type'      => 'post',
-            'offset'         => 3,
-            'posts_per_page' => 4,
-            'paged'          => $paged
-          );
-          $the_query = new WP_Query( $args );
+            $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+            $args = array(
+              'post_type'      => 'post',
+              'offset'         => 3,
+              'posts_per_page' => 4,
+              'paged'          => $paged
+            );
+            $the_query = new WP_Query( $args );
 
-          if ( $the_query->have_posts() ) {
-            while( $the_query->have_posts() ) :
-              $the_query->the_post();
+            if ( $the_query->have_posts() ) {
+              while( $the_query->have_posts() ) :
+                $the_query->the_post();
 
-              get_template_part( 'template-parts/blog', 'list' );
+                get_template_part( 'template-parts/blog', 'list' );
 
-            endwhile;
+              endwhile;
 
 
-          } else {
-            echo '<h2>Não há postagens existentes</h2>';
-          }
+            } else {
+              echo '<h2>Não há postagens existentes</h2>';
+            }
 
-          wp_reset_postdata();
-        ?>
+            wp_reset_postdata();
+          ?>
+          <div class="pagination">
+						<?php
+							$big = 99;
+              $format = empty( get_option('permalink_structure') ) ? '&page=%#%' : 'page/%#%/?s';
+              $total = $the_query->max_num_pages;
+
+							echo paginate_links( array(
+								'base' => get_pagenum_link(1) . '%_%',
+                'format'    => $format,
+                'current'   => 1,
+                'total'     => $total,
+								'prev_text' => '<',
+								'next_text' => '>'
+							));
+						?>
+					</div>
 
         </div>
         <div class="col-md-4">
