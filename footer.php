@@ -21,32 +21,32 @@
 							<li>
 								<a href="">
 									<span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/whatsapp.svg" alt=""/></span>
-									(12) 3456-7890
+									<?php the_field('whatsapp', 'options'); ?>
 								</a>
 							</li>
 							<li>
 								<a href="">
 									<span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/phone.svg" alt=""/></span>
-									(12) 3456-7890
+									<?php the_field('telefone', 'options'); ?>
 								</a>
 							</li>
 							<li>
 								<a href="">
 									<span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/mail.svg" alt=""/></span>
-									laveniacosmeticos@gmail.com
+									<?php the_field('email', 'options'); ?>
 								</a>
 							</li>
 							<li>
 								<a href="" class="text-uppercase">
 									<span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/pin.svg" alt=""/></span>
-									RUA vicente machado,1645 apto 17 , centro, cep 85812-150 - Cascavel pr
+									<?php the_field('endereco', 'options'); ?>
 								</a>
 							</li>
 						</ul>
 					</div>
 					<div class="col-12 text-center">
-						<p class="mb-0">Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Curabitur blandit tempus porttitor.</p>
-						<p class="mb-0">© All Rights Reserved 2021 - LaVenia.</p>
+						<p class="mb-0"><?php the_field('texto_copyright', 'options'); ?></p>
+						<p class="mb-0"><?php the_field( 'copyright', 'options' ); ?></p>
 					</div>
 				</div>
 			</div>

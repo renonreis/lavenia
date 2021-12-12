@@ -44,10 +44,10 @@ get_header();
           <?php
           $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
           $args = array(
+            'post_type'      => 'post',
             'offset'         => 3,
-            'paged'          => $paged,
             'posts_per_page' => 4,
-            'post_type'      => 'post'
+            'paged'          => $paged
           );
           $the_query = new WP_Query( $args );
 
@@ -63,8 +63,10 @@ get_header();
           } else {
             echo '<h2>Não há postagens existentes</h2>';
           }
+
           wp_reset_postdata();
         ?>
+
         </div>
         <div class="col-md-4">
           <?php get_template_part( 'template-parts/sidebar' ); ?>

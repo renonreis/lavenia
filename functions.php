@@ -226,8 +226,9 @@ function set_post_views($post_id) {
 }
 
 function track_post_views ($post_id) {
-	if ( !is_single() )
-	return;
+	if ( !is_single() ){
+		return;
+	}
 
 	if ( empty ( $post_id) ) {
 			global $post;
@@ -238,3 +239,9 @@ function track_post_views ($post_id) {
 }
 
 add_action( 'wp_head', 'track_post_views');
+
+function remove_pages_from_search() {
+	global $wp_post_types;
+	$wp_post_types['page']->exclude_from_search = true;
+}
+add_action('init', 'remove_pages_from_search');
