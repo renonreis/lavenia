@@ -1428,6 +1428,63 @@ footer .footer {
 	padding: 0 5px;
 }
 
+.search-filter ul {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+.search-filter ul li {
+	margin-bottom: 15px;
+	padding: 0;
+}
+
+.search-filter ul li select {
+	background: url(assets/img/arrow-down.svg) no-repeat 95% #ffffff;
+	border: 0;
+	border-radius: 30px;
+	font-size: 14px;
+	line-height: 18px;
+	outline: none;
+	overflow: hidden;
+	overflow: -moz-hidden-unscrollable;
+	padding: 14px 30px;
+	width: 100%;
+	-webkit-appearance: none;
+}
+
+.search-filter ul li input[type="text"] {
+	background: url(assets/img/search-icon.svg) no-repeat 95% #ffffff;
+	border: 0;
+	border-radius: 30px;
+	font-size: 14px;
+	line-height: 18px;
+	outline: none;
+	overflow: hidden;
+	overflow: -moz-hidden-unscrollable;
+	padding: 14px 30px;
+	width: 100%;
+	-webkit-appearance: none;
+}
+
+.search-filter ul li input[type="submit"] {
+	background-color: #0A92E0;
+	border: 0;
+	border-radius: 30px;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 18px;
+	padding: 14px 30px;
+	transition: 0.3s all;
+	width: 100%;
+}
+
+.search-filter ul li input[type="submit"]:hover {
+	background-color: #212121;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

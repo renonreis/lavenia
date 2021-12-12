@@ -1,3 +1,6 @@
+<div class="search-filter">
+  <?php echo do_shortcode( '[searchandfilter fields="category,search" search_placeholder="Busque uma postagem" submit_label="Pesquisar"]' ); ?>
+</div>
 <div class="newsletter-sidebar">
   <h2>Inscreva-se na nossa newsletter</h2>
   <p>E fique por dentro de todas as novidades</p>
