@@ -1,0 +1,101 @@
+{
+    "key": "group_5d7d37d712269",
+    "title": "Scripts",
+    "fields": [
+        {
+            "key": "field_610004e57a418",
+            "label": "Meta-tags",
+            "name": "scripts_metatag",
+            "type": "textarea",
+            "instructions": "Insira scripts de meta-tag que devem ser inseridos no \"header\" do site, como os de verificação de domínio.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5d7d37ee0009d",
+            "label": "Cabeçalho",
+            "name": "scripts_header",
+            "type": "textarea",
+            "instructions": "Insira os scripts que devem ser inseridos no \"header\" do site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 12,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5d7d381cb798f",
+            "label": "Body",
+            "name": "scripts_body",
+            "type": "textarea",
+            "instructions": "Insira os scripts que devem ser inseridos no \"body\" do site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 12,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5d7d3823b7990",
+            "label": "Rodapé",
+            "name": "scripts_footer",
+            "type": "textarea",
+            "instructions": "Insira os scripts que devem ser inseridos no \"footer\" do site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 12,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "scripts_template"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1639326317
+}
