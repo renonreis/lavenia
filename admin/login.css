@@ -7,9 +7,9 @@
 }
 
 .login h1 a {
-	background-image: url(./../assets/img/logo.svg);
+	background-image: url(./../assets/img/logo-lavenia.png);
 	background-position: center;
-	background-size: contain;
+	background-size: auto;
 	width: 100%;
 }
 
