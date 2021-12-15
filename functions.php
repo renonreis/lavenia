@@ -246,14 +246,27 @@ function remove_pages_from_search() {
 }
 add_action('init', 'remove_pages_from_search');
 
-function add_paragraphs($content) {
+function box_leia_tambem() {
 	$featured_posts = get_field('links_leia_tambem');
-
 	if( $featured_posts ):
-		$additions = array('<div class="box-leia-tambem">
-		<p class="title">' . get_field( 'titulo_box' ) . '</p>
-	</div>');
+		$box = '';
+		$box .= '<div class="box-leia-tambem">';
+		$box .= '<p class="title">' . get_field( 'titulo_box' ) . '</p>';
+		foreach( $featured_posts as $featured_post ):
+			$permalink = get_permalink( $featured_post->ID );
+			$title .= get_the_title( $featured_post->ID );
+			$box .=  '<a href="' . esc_url( $permalink ) . '">';
+			$box .=	esc_html( $title );
+			$box .=	'</a>';
+		endforeach;
+		$box .= '</div>';
 	endif;
+	return $box;
+}
+add_shortcode( 'box_leia_tambem', 'box_leia_tambem' );
+
+function add_paragraphs($content) {
+	$additions = array('[box_leia_tambem]');
 
 	$output = '';
 	$parts = explode("</p>", $content);
@@ -264,4 +277,4 @@ function add_paragraphs($content) {
 	}
 	return $output;
 }
-//add_filter('the_content','add_paragraphs');
+add_filter('the_content','add_paragraphs');
