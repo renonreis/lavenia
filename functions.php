@@ -249,19 +249,24 @@ add_action('init', 'remove_pages_from_search');
 function box_leia_tambem() {
 	$featured_posts = get_field('links_leia_tambem');
 	if( $featured_posts ):
-		$box = '';
-		$box .= '<div class="box-leia-tambem">';
-		$box .= '<p class="title">' . get_field( 'titulo_box' ) . '</p>';
+		$teste = '';
+
+		$teste .= '<div class="box-leia-tambem">
+			<p class="title">' . get_field( 'titulo_box' ) . '</p>';
+
 		foreach( $featured_posts as $featured_post ):
 			$permalink = get_permalink( $featured_post->ID );
-			$title .= get_the_title( $featured_post->ID );
-			$box .=  '<a href="' . esc_url( $permalink ) . '">';
-			$box .=	esc_html( $title );
-			$box .=	'</a>';
+			$title = get_the_title( $featured_post->ID );
+
+			$teste .= '<a href="' . esc_url( $permalink ) . '">' . esc_html( $title ) . '</a>';
+
 		endforeach;
-		$box .= '</div>';
+
+		$teste .= '</div>';
+
 	endif;
-	return $box;
+
+	return $teste;
 }
 add_shortcode( 'box_leia_tambem', 'box_leia_tambem' );
 
