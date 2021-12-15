@@ -14,8 +14,8 @@ function acf_options(){
 		));
 
 			acf_add_options_sub_page(array(
-				'page_title'    => 'Rodapé',
-				'menu_title'    => 'Rodapé',
+				'page_title'    => 'Cabeçalho/Rodapé',
+				'menu_title'    => 'Cabeçalho/Rodapé',
 				'menu_slug'     => 'rodape_template',
 				'parent_slug'   => 'opcoes_template',
 			));

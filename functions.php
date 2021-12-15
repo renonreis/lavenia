@@ -245,3 +245,23 @@ function remove_pages_from_search() {
 	$wp_post_types['page']->exclude_from_search = true;
 }
 add_action('init', 'remove_pages_from_search');
+
+function add_paragraphs($content) {
+	$featured_posts = get_field('links_leia_tambem');
+
+	if( $featured_posts ):
+		$additions = array('<div class="box-leia-tambem">
+		<p class="title">' . get_field( 'titulo_box' ) . '</p>
+	</div>');
+	endif;
+
+	$output = '';
+	$parts = explode("</p>", $content);
+	$count = count($parts);
+
+	for($i=0; $i<$count; $i++) {
+		$output .= $parts[$i] . '</p>' . $additions[$i];
+	}
+	return $output;
+}
+//add_filter('the_content','add_paragraphs');

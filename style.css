@@ -811,6 +811,7 @@ textarea {
 }
 
 .post-categoria {
+	font-family: 'Times New Roman', serif;
 	font-size: 12px;
 	color: #0A92E0 !important;
 	text-decoration: none;
@@ -837,6 +838,7 @@ textarea {
 
 .post-autor {
 	color: #757575;
+	font-family: 'Times New Roman', serif;
 	font-size: 12px;
 	line-height: 24px;
 }
@@ -866,6 +868,22 @@ textarea {
 	display: inline-flex;
 	margin: 0 5px;
 	text-decoration: none;
+}
+
+.box-leia-tambem {
+	border: 1px solid #0A92E0;
+	border-radius: 5px;
+	font-size: 16px;
+	margin: 20px auto 40px;
+	max-width: 425px;
+	padding: 15px;
+	text-align: center;
+	width: 100%;
+}
+
+.box-leia-tambem .title {
+	color: #0A92E0;
+	font-size: 16px !important;
 }
 
 .grid-posts {
@@ -1469,6 +1487,7 @@ footer .footer {
 }
 
 .search-filter ul li {
+	list-style: none;
 	margin-bottom: 15px;
 	padding: 0;
 }
@@ -1655,7 +1674,7 @@ footer .footer {
 	--bs-black-rgb: 0, 0, 0;
 	--bs-body-color-rgb: 33, 37, 41;
 	--bs-body-bg-rgb: 255, 255, 255;
-	--bs-font-sans-serif: "Montserrat", sans-serif;
+	--bs-font-sans-serif: futura-pt, sans-serif;
 	--bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 	--bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 	--bs-body-font-family: var(--bs-font-sans-serif);
